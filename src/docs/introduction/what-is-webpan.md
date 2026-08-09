@@ -36,7 +36,7 @@ This ensures there are no hard-coded behaviours - that all features are customis
          commit
          commit
   ```
-- Use multiple plugins at once to maximise chaos.
+- Ability to use multiple plugins at once to maximise chaos.
     ```mermaid
     ---
     config:
