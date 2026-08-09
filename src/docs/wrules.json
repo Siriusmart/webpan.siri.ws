@@ -1,0 +1,71 @@
+{
+    "processors": {
+        "/": [
+            "vitepress-resources",
+            "dir-toc"
+        ],
+        "**.md": {
+            "vitepress-doc": {
+                "output": "html",
+                "css": [
+                    "https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css",
+                    "https://cdn.jsdelivr.net/npm/@microflash/rehype-starry-night@8.0.4/src/index.css",
+                    "https://cdn.jsdelivr.net/npm/@microflash/rehype-starry-night@8.0.4/src/props.css",
+                    "https://cdn.jsdelivr.net/npm/@wooorm/starry-night@3.10.0/style/dark.css"
+                ]
+            },
+            "unified": {
+                "stack": [
+                    "remark-parse",
+                    "raw:remark-math",
+                    "raw:remark-gfm",
+                    {
+                        "name": "remark-frontmatter",
+                        "options": [
+                            "yaml",
+                            "toml"
+                        ]
+                    },
+                    {
+                        "name": "remark-rehype",
+                        "options": {
+                            "allowDangerousHtml": true
+                        }
+                    },
+                    {
+                        "name": "raw:rehype-external-links",
+                        "options": {
+                            "target": "_blank",
+                            "rel": [
+                                "nofollow",
+                                "noopener",
+                                "noreferrer"
+                            ]
+                        }
+                    },
+                    "raw:rehype-katex",
+                    {
+                        "name": "rehype-mermaid",
+                        "options": {
+                            "mermaidConfig": {
+                                "theme": "dark"
+                            }
+                        }
+                    },
+                    {
+                        "name": "raw:rehype-starry-night",
+                        "vpUseAst": true,
+                        "snapshot": true
+                    },
+                    {
+                        "name": "rehype-stringify",
+                        "options": {
+                            "allowDangerousHtml": true
+                        }
+                    }
+                ],
+                "output": "p => `${path.parse(p).name}-raw.html`"
+            }
+        }
+    }
+}

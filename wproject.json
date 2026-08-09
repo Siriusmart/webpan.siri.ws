@@ -1,0 +1,13 @@
+{
+    "system": {
+        "packageManager": "npm"
+    },
+    "format": {
+        "buildInfo": false
+    },
+    "cmd": {
+        "build": {
+            "clean": false
+        }
+    }
+}
