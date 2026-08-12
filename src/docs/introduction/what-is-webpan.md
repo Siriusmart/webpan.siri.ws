@@ -1,5 +1,5 @@
 ---
-title: What is Webpan?
+title: What is Webpan
 ---
 
 # What is Webpan?
@@ -12,14 +12,12 @@ This ensures there are no hard-coded behaviours - that all features are customis
 
 | Use case         | Status                                                                                  |
 | ---------------- | --------------------------------------------------------------------------------------- |
-| Documentation    | ✅ **_YES!_** We have plugins - this page is generated with Webpan!                     |
-| Notes publishing | ✅ **_YES!_** Use the same plugins for documentation, which supports unlimited folder depth. |
+| Documentation    | ✅ **_YES!_** There are plugins - this page is generated with Webpan!                     |
+| Notes publishing | ✅ **_YES!_** Use the same plugins as documentation, which supports unlimited folder depth. |
 | Blog site        | ⏳ **_WIP!_** I am writing plugins for that.                                            |
 
-### Things that are unique to Webpan
-
 - Renders everything into HTML and CSS, so **JavaScript is not required** to
-  display $\LaTeX$ or Mermaid diagrams.
+  display $\LaTeX$, Mermaid diagrams and syntax highlighting.
 
   ```mermaid
       gitGraph
@@ -36,6 +34,9 @@ This ensures there are no hard-coded behaviours - that all features are customis
          commit
          commit
   ```
+  ```ts
+  console.log("syntax highlighting without client side JS");
+  ```
 - Ability to use multiple plugins at once to maximise chaos.
     ```mermaid
     ---
@@ -48,12 +49,12 @@ This ensures there are no hard-coded behaviours - that all features are customis
           descriptionColor: '#FFFFFF'
     ---
     treeView-beta
-        "blob-posts"
+        "blob-posts/"
             "why-im-really-cool.md"
             "demonstrating-my-coolness.html"
             "demonstrating-my-coolness.css"
             "demonstrating-my-coolness.js"
-        "notes"
+        "notes/"
             "rust-lang.md"
             "discrete-maths.tex"
             "digital-electronics.typ"
@@ -63,11 +64,11 @@ This ensures there are no hard-coded behaviours - that all features are customis
   
 ## Developer Experience
 
-- **Incremental building** - remembers the previous build, and only rebuild what's
+- **Quick subsequent builds** - remembers the previous build, and only rebuild what's
   changed.
-- **Instant preview** - with edits typically reflected in <1000ms without refreshing the page.
-- **Reproducible build** - all plugins are installed as npm packages on the
+- **Instant preview** - edits reflected in browser without refreshing the page.
+- **Reproducible builds** - all plugins are installed as npm packages on the
   project.
   
 > #### Human-made notice
-> Webpan is human-made, any programming sins committed is my fault alone.
+> Webpan is human-made, the experience of human programmers are prioritised.

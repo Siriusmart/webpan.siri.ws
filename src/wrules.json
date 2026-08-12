@@ -1,7 +1,6 @@
 {
     "processors": {
         "**/": "index",
-        "**": "copy",
-        "**/*.yml": "yaml-parse"
+        "**": "copy"
     }
 }
