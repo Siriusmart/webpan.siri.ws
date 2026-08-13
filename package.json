@@ -25,7 +25,7 @@
     "wp-index": "^0.2.2",
     "wp-unified": "^0.1.28",
     "wp-vitepress-doc": "^0.1.10",
-    "wp-vitepress-resources": "^0.1.10",
+    "wp-vitepress-resources": "^0.1.12",
     "wp-yaml-parse": "^0.1.0",
     "wunified-rehype-mermaid": "^0.1.0",
     "wunified-rehype-stringify": "^0.1.4",
